@@ -1,6 +1,0 @@
-/home/vidd/Desktop/Grafi/build/src/CMakeFiles/grafi.dir
-/home/vidd/Desktop/Grafi/build/test/googletest/googlemock/gtest/CMakeFiles/gtest.dir
-/home/vidd/Desktop/Grafi/build/test/CMakeFiles/tests.dir
-/home/vidd/Desktop/Grafi/build/test/googletest/googlemock/CMakeFiles/gmock.dir
-/home/vidd/Desktop/Grafi/build/test/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir
-/home/vidd/Desktop/Grafi/build/test/googletest/googlemock/CMakeFiles/gmock_main.dir
