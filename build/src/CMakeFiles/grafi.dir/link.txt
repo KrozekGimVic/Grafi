@@ -1,0 +1,2 @@
+/usr/bin/ar cq ../../lib/libgrafi.a  CMakeFiles/grafi.dir/dfs_topological_sort.cpp.o
+/usr/bin/ranlib ../../lib/libgrafi.a

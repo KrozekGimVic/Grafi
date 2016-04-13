@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11   CMakeFiles/tests.dir/dfs_topological_sort_test.cpp.o  -o ../../bin/tests -rdynamic ../../lib/libgrafi.a ../../lib/libgtest.a ../../lib/libgtest_main.a ../../lib/libgtest.a -lpthread 
