@@ -1,5 +1,5 @@
 add_subdirectory(googletest)
 include_directories(googletest/googletest/include)
-set(TEST_FILES dfs_topological_sort_test.cpp)
+set(TEST_FILES dfs_topological_sort_test.cpp bfs_test.cpp)
 add_executable(tests ${TEST_FILES})
 target_link_libraries(tests grafi gtest gtest_main)
