@@ -32,3 +32,5 @@
 
 # Build
 build/
+bin/
+lib/
