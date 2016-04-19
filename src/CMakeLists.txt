@@ -1,2 +1,2 @@
-set(SOURCE_FILES dfs_topological_sort.cpp bfs.cpp dfs.cpp)
+set(SOURCE_FILES topological_sort_dfs.cpp topological_sort_bfs.cpp bfs.cpp dfs.cpp)
 add_library(grafi ${SOURCE_FILES})
