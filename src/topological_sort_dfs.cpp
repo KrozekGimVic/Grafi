@@ -25,7 +25,7 @@ std::vector<int> topologicalSortDfs(const graf_t& graph) {
 
     std::vector<int> result;
 
-    for (int i = 0; i < graph.size(); ++i) {
+    for (unsigned int i = 0; i < graph.size(); ++i) {
         if (visited[i]) {
             continue;
         }

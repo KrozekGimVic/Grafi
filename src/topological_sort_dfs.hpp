@@ -4,6 +4,7 @@
 #include "typedefs.hpp"
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 std::vector<int> topologicalSortDfs(const graf_t& graph);
 
