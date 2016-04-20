@@ -5,7 +5,7 @@ vector<int> topological_sort_bfs(const graf_t& g){
 	
 	int N = g.size();
 
-	vector<int> ind;
+	vector<int> ind(N, 0);
 
 	for(int i = 0; i < N; ++i){
 		for(int v : g[i]){
