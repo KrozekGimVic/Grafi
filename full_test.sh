@@ -10,7 +10,7 @@ Options:
   -c   run only dependency checking
   -t   run only tests
   -s   run only stylechecks
-  -d   tun only docscheck
+  -d   run only docscheck
   -h   print this help
 Example:
  ./run_tests.sh -sd"
