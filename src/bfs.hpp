@@ -3,9 +3,6 @@
 
 #include "typedefs.hpp"
 
-#include <vector>
-#include <queue>
-
-int count_components_bfs(const std::vector<std::vector<int>>& graph);
+int count_components_bfs(const graf_t& graph);
 
 #endif //GRAFI_SRC_BFS_HPP
