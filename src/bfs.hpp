@@ -1,5 +1,5 @@
-#ifndef GRAFI_SRC_BFS_HPP
-#define GRAFI_SRC_BFS_HPP
+#ifndef SRC_BFS_HPP_
+#define SRC_BFS_HPP_
 
 #include "typedefs.hpp"
 
@@ -16,4 +16,4 @@
 
 int count_components_bfs(const graf_t& graph);
 
-#endif //GRAFI_SRC_BFS_HPP
+#endif  // SRC_BFS_HPP_

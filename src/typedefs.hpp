@@ -1,8 +1,10 @@
-#ifndef GRAFI_SRC_TYPEDEFS_HPP
-#define GRAFI_SRC_TYPEDEFS_HPP
+#ifndef SRC_TYPEDEFS_HPP_
+#define SRC_TYPEDEFS_HPP_
 
 #include <vector>
+#include <utility>
 
 typedef std::vector<std::vector<int>> graf_t;
+typedef std::vector<std::vector<std::pair<int, int>>> directed_graf_t;
 
-#endif //GRAFI_SRC_TYPEDEFS_HPP
+#endif  // SRC_TYPEDEFS_HPP_

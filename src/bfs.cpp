@@ -3,7 +3,7 @@
 #include <vector>
 #include <queue>
 
-int count_components_bfs(const graf_t& graph){
+int count_components_bfs(const graf_t& graph) {
     int num = 0, n = graph.size();
     std::vector<bool> visited(n, false);
 
@@ -18,7 +18,7 @@ int count_components_bfs(const graf_t& graph){
                 queue.pop();
                 if (!visited[v]) {
                     visited[v] = true;
-                    for (int u: graph[v]) queue.push(u);
+                    for (int u : graph[v]) queue.push(u);
                 }
             }
         }
