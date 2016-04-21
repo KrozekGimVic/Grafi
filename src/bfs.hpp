@@ -1,7 +1,7 @@
 #ifndef SRC_BFS_HPP_
 #define SRC_BFS_HPP_
 
-#include "typedefs.hpp"
+#include "utils.hpp"
 
 /**
  * @file bfs.hpp
@@ -10,7 +10,7 @@
 
 /**
  * @brief Counts components of a graph.
- * @param grapg A directed graph.
+ * @param graph A directed graph.
  * @returns Number of components in graph.
  */
 
