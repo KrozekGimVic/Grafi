@@ -1,0 +1,42 @@
+\hypertarget{minimum__spanning__tree__kruskal_8hpp}{\section{src/minimum\-\_\-spanning\-\_\-tree\-\_\-kruskal.hpp File Reference}
+\label{minimum__spanning__tree__kruskal_8hpp}\index{src/minimum\-\_\-spanning\-\_\-tree\-\_\-kruskal.\-hpp@{src/minimum\-\_\-spanning\-\_\-tree\-\_\-kruskal.\-hpp}}
+}
+{\ttfamily \#include \char`\"{}utils.\-hpp\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structedge}{edge}
+\begin{DoxyCompactList}\small\item\em Represents weighted edge from vertex a to vertex b, with weight w. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{minimum__spanning__tree__kruskal_8hpp_af9946a32cc83c27e737f5b23b2d22bf6}{sum\-\_\-of\-\_\-paths\-\_\-minimum\-\_\-spanning\-\_\-tree} (const \hyperlink{utils_8hpp_acc38130141c53c6860591db1ec5dd221}{weighted\-\_\-graf\-\_\-t} \&graph)
+\begin{DoxyCompactList}\small\item\em Creates minimum spanning tree from given undirected weighted graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Matej Marinko \href{mailto:matejmarinko123@gmail.com}{\tt matejmarinko123@gmail.\-com} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{minimum__spanning__tree__kruskal_8hpp_af9946a32cc83c27e737f5b23b2d22bf6}{\index{minimum\-\_\-spanning\-\_\-tree\-\_\-kruskal.\-hpp@{minimum\-\_\-spanning\-\_\-tree\-\_\-kruskal.\-hpp}!sum\-\_\-of\-\_\-paths\-\_\-minimum\-\_\-spanning\-\_\-tree@{sum\-\_\-of\-\_\-paths\-\_\-minimum\-\_\-spanning\-\_\-tree}}
+\index{sum\-\_\-of\-\_\-paths\-\_\-minimum\-\_\-spanning\-\_\-tree@{sum\-\_\-of\-\_\-paths\-\_\-minimum\-\_\-spanning\-\_\-tree}!minimum_spanning_tree_kruskal.hpp@{minimum\-\_\-spanning\-\_\-tree\-\_\-kruskal.\-hpp}}
+\subsubsection[{sum\-\_\-of\-\_\-paths\-\_\-minimum\-\_\-spanning\-\_\-tree}]{\setlength{\rightskip}{0pt plus 5cm}int sum\-\_\-of\-\_\-paths\-\_\-minimum\-\_\-spanning\-\_\-tree (
+\begin{DoxyParamCaption}
+\item[{const {\bf weighted\-\_\-graf\-\_\-t} \&}]{graph}
+\end{DoxyParamCaption}
+)}}\label{minimum__spanning__tree__kruskal_8hpp_af9946a32cc83c27e737f5b23b2d22bf6}
+
+
+Creates minimum spanning tree from given undirected weighted graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & A undirected weighted graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sum of weights on edges of minimum spanning tree. If mimimum spanning tree for given graph does not exist, returns -\/1. For empty graphs returns 0. 
+\end{DoxyReturn}

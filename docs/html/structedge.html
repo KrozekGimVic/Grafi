@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Grafi: src/bfs.hpp File Reference</title>
+<title>Grafi: edge Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,8 +37,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -59,8 +59,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -77,56 +77,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structedge-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">bfs.hpp File Reference</div>  </div>
+<div class="title">edge Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="utils_8hpp_source.html">utils.hpp</a>&quot;</code><br/>
-</div>
-<p><a href="bfs_8hpp_source.html">Go to the source code of this file.</a></p>
+
+<p>Represents weighted edge from vertex a to vertex b, with weight w.  
+ <a href="structedge.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="minimum__spanning__tree__kruskal_8hpp_source.html">minimum_spanning_tree_kruskal.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a48862b84b0a32f37b35f9b33f83d8ee2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bfs_8hpp.html#a48862b84b0a32f37b35f9b33f83d8ee2">count_components_bfs</a> (const <a class="el" href="utils_8hpp.html#ab6d5f39dde62fe638e7ae8c99987f917">graf_t</a> &amp;graph)</td></tr>
-<tr class="memdesc:a48862b84b0a32f37b35f9b33f83d8ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts components of a graph.  <a href="#a48862b84b0a32f37b35f9b33f83d8ee2">More...</a><br/></td></tr>
-<tr class="separator:a48862b84b0a32f37b35f9b33f83d8ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1be1d1dcbe96713a4dabdc83b9253b6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1be1d1dcbe96713a4dabdc83b9253b6d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="structedge.html">edge</a> &amp;e) const </td></tr>
+<tr class="separator:a1be1d1dcbe96713a4dabdc83b9253b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a4094684ed54ca0e4ec3a9b251bfb2b0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4094684ed54ca0e4ec3a9b251bfb2b0f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>a</b></td></tr>
+<tr class="separator:a4094684ed54ca0e4ec3a9b251bfb2b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76a37f47c8fca97b8adfcb588130e0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae76a37f47c8fca97b8adfcb588130e0d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>b</b></td></tr>
+<tr class="separator:ae76a37f47c8fca97b8adfcb588130e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b4c1e3301482cde167eeb25135fa4ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b4c1e3301482cde167eeb25135fa4ea"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>w</b></td></tr>
+<tr class="separator:a2b4c1e3301482cde167eeb25135fa4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Matej Marinko <a href="#" onclick="location.href='mai'+'lto:'+'mat'+'ej'+'mar'+'in'+'ko1'+'23'+'@gm'+'ai'+'l.c'+'om'; return false;">matej<span style="display: none;">.nosp@m.</span>mari<span style="display: none;">.nosp@m.</span>nko12<span style="display: none;">.nosp@m.</span>3@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a48862b84b0a32f37b35f9b33f83d8ee2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int count_components_bfs </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="utils_8hpp.html#ab6d5f39dde62fe638e7ae8c99987f917">graf_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>graph</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Counts components of a graph. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">graph</td><td>A directed graph. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of components in graph. </dd></dl>
-
-</div>
-</div>
+<div class="textblock"><p>Represents weighted edge from vertex a to vertex b, with weight w. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>src/<a class="el" href="minimum__spanning__tree__kruskal_8hpp_source.html">minimum_spanning_tree_kruskal.hpp</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

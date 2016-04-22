@@ -7,18 +7,20 @@
 
 var indexSectionsWithContent =
 {
-  0: "bcguw",
-  1: "bu",
-  2: "c",
-  3: "gw"
+  0: "bcegmsuw",
+  1: "e",
+  2: "bmu",
+  3: "cs",
+  4: "gw"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files",
-  2: "functions",
-  3: "typedefs"
+  1: "classes",
+  2: "files",
+  3: "functions",
+  4: "typedefs"
 };
 
 function convertToId(search)
