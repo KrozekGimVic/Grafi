@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Grafi: File Members</title>
+<title>Grafi: src/topological_sort_dfs.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,17 +61,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li class="current"><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
-  <div id="navrow3" class="tabs2">
-    <ul class="tablist">
-      <li><a href="globals.html"><span>All</span></a></li>
-      <li class="current"><a href="globals_func.html"><span>Functions</span></a></li>
-      <li><a href="globals_type.html"><span>Typedefs</span></a></li>
-    </ul>
-  </div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -86,18 +78,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">topological_sort_dfs.hpp File Reference</div>  </div>
+</div><!--header-->
 <div class="contents">
-&#160;<ul>
-<li>count_components_bfs()
-: <a class="el" href="bfs_8hpp.html#a48862b84b0a32f37b35f9b33f83d8ee2">bfs.hpp</a>
-</li>
-<li>sum_of_paths_minimum_spanning_tree()
-: <a class="el" href="minimum__spanning__tree__kruskal_8hpp.html#af9946a32cc83c27e737f5b23b2d22bf6">minimum_spanning_tree_kruskal.hpp</a>
-</li>
-<li>topologicalSortDfs()
-: <a class="el" href="topological__sort__dfs_8hpp.html#a69eea6084992f32c6d1ef6a2002bb402">topological_sort_dfs.hpp</a>
-</li>
-</ul>
+
+<p>DFS Topological Sort.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;typedefs.hpp&quot;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+</div>
+<p><a href="topological__sort__dfs_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a69eea6084992f32c6d1ef6a2002bb402"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topological__sort__dfs_8hpp.html#a69eea6084992f32c6d1ef6a2002bb402">topologicalSortDfs</a> (const <a class="el" href="utils_8hpp.html#ab6d5f39dde62fe638e7ae8c99987f917">graf_t</a> &amp;graph)</td></tr>
+<tr class="memdesc:a69eea6084992f32c6d1ef6a2002bb402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Topologically sorts a graph using dfs.  <a href="#a69eea6084992f32c6d1ef6a2002bb402">More...</a><br /></td></tr>
+<tr class="separator:a69eea6084992f32c6d1ef6a2002bb402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>DFS Topological Sort. </p>
+<dl class="section author"><dt>Author</dt><dd>Vid Drobnič <a href="#" onclick="location.href='mai'+'lto:'+'vid'+'.d'+'rob'+'ni'+'c@g'+'ma'+'il.'+'co'+'m'; return false;">vid.d<span style="display: none;">.nosp@m.</span>robn<span style="display: none;">.nosp@m.</span>ic@gm<span style="display: none;">.nosp@m.</span>ail.<span style="display: none;">.nosp@m.</span>com</a> </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a69eea6084992f32c6d1ef6a2002bb402"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; topologicalSortDfs </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="utils_8hpp.html#ab6d5f39dde62fe638e7ae8c99987f917">graf_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>graph</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Topologically sorts a graph using dfs. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>A directed graph. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Topologically sorted vertices. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
