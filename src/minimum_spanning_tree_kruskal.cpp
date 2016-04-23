@@ -3,6 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <iostream>
+#include <limits>
 
 bool union_find(int a, int b, std::vector<int>& parent, std::vector<int>& rank) {
     int parent_a = a, parent_b = b;
@@ -43,6 +44,6 @@ int sum_of_paths_minimum_spanning_tree(const weighted_graf_t& graph) {
         }
         if (edge_count == n - 1) break;
     }
-    if (edge_count < n - 1) return -1;
+    if (edge_count < n - 1) return std::numeric_limits<int>::max();
     return sum;
 }

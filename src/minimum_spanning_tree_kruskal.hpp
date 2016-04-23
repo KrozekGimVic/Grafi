@@ -6,6 +6,7 @@
 /**
  * @file minimum_spanning_tree_kruskal.hpp
  * @author Matej Marinko <matejmarinko123@gmail.com>
+ * @brief Kruskal's minimum spanning tree algorithm.
  */
 
 /// @brief Represents weighted edge from vertex a to vertex b, with weight w.
@@ -20,7 +21,7 @@ struct edge {
  * @brief Creates minimum spanning tree from given undirected weighted graph.
  * @param graph A undirected weighted graph.
  * @returns Sum of weights on edges of minimum spanning tree. If mimimum spanning
- * tree for given graph does not exist, returns -1. For empty graphs returns 0.
+ * tree for given graph does not exist, returns max integer value. For empty graphs returns 0.
  */
 int sum_of_paths_minimum_spanning_tree(const weighted_graf_t& graph);
 

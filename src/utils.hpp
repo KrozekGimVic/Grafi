@@ -6,6 +6,7 @@
 
 /**
  * @file utils.hpp
+ * @brief Typedefs & classes.
  */
 
 /// Represents a directed graph.
