@@ -17,6 +17,10 @@
  * @param graph A directed graph.
  * @returns Topologically sorted vertices.
  */
-std::vector<int> topologicalSortDfs(const graf_t& graph);
+std::vector<int> topological_sort_dfs(const graf_t& graph);
+
+namespace topological_sort_dfs_internal {
+    std::vector<int> topological_sort(const graf_t &graph, std::vector<bool> &visited, int startNode);
+}
 
 #endif //GRAFI_DFS_TOPOLOGICAL_SORT_HPP
