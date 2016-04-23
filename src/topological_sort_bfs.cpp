@@ -1,44 +1,75 @@
 #include "topological_sort_bfs.hpp"
 
 using std::vector;
-vector<int> topological_sort_bfs(const graf_t& g){
-	
-	int N = g.size();
 
-	vector<int> ind(N, 0);
+/**
+ * @file: topological_sort_bfs.cpp
+ * @author: Rok Kos
+ * @date: 20.04.2016
+ */
 
-	for(int i = 0; i < N; ++i){
-		for(int v : g[i]){
-			ind[v]++;
-		}
-	}
+/**
+ * \briff Topologicaly sort graph
+ * 
+ * Algorithm that sorts directed acyclic graph wiht dfs algorihtm.
+ * 
+ * \param g an input graph
+ * 
+ * \return Topological sorted graph 
+ * 
+ */
+vector<int> topological_sort_bfs(const graf_t& g) {
+    int N = g.size();  // size of graph
 
-	std::queue<int> q;
-	
-	for (int i = 0; i < ind.size(); ++i){
-		if(ind[i] == 0){
-			q.push(i);	
-		} 
-	}
+    vector<int> ind(N, 0);  // vector that hold how many path lead to current vertex
 
-	vector<int> dag;
+    // goes thru graph and count path to each vertex
+    for (int i = 0; i < N; ++i) {
+        for (int v : g[i]) {
+            ind[v]++;
+        }
+    }
 
-	while(!q.empty()){
+    std::queue<int> q;  // queue that hold next vertex in line
+    // push in queue all vertax that have no path leading to them
+    for (int i = 0; i < N; ++i) {
+        if (ind[i] == 0) {
+            q.push(i);
+        }
+    }
 
-		int curInd = q.front();
-		q.pop();
+    vector<int> dag;  // our topological sorted graph
+    vector<int> empty = {};  // vector that we return when graph is invalid
 
-		dag.push_back(curInd);
+    while (!q.empty()) {
+        // get firts from queue
+        int curInd = q.front();
+        q.pop();
+        dag.push_back(curInd);
 
-		for(int v : g[curInd]){
-			ind[v]--;
-			if(ind[v] == 0){
-				q.push(v);
-			}
-			
-		}
+        // go thru all his neighbours
+        for (int v : g[curInd]) {
+            ind[v]--;
 
-	}
+            // if vertex has no path to them then push this vertex in queue
+            if (ind[v] == 0) {
+                q.push(v);
+            }
 
-	return dag;
+            // if we went thru one vertex more than once
+            // that means that there is cycle or this is invalid graph
+            if (ind[v] < 0) {
+                return empty;
+            }
+        }
+    }
+
+    int dag_size = dag.size();
+
+    // if queue was empty before we went thru all vertex that means that there was cycle
+    if (dag_size < N) {
+        return empty;
+    }
+
+    return dag;
 }

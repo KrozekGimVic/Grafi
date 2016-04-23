@@ -1,5 +1,5 @@
-#ifndef GRAFI_TOPOLOGICAL_SORT_BFS_HPP
-#define GRAFI_TOPOLOGICAL_SORT_BFS_HPP
+#ifndef SRC_TOPOLOGICAL_SORT_BFS_HPP_
+#define SRC_TOPOLOGICAL_SORT_BFS_HPP_
 
 #include "typedefs.hpp"
 
@@ -9,4 +9,4 @@
 
 std::vector<int> topological_sort_bfs(const graf_t& g);
 
-#endif  // GRAFI_TOPOLOGICAL_SORT_BFS_HPP
+#endif  // SRC_TOPOLOGICAL_SORT_BFS_HPP_
