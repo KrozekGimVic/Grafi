@@ -2,7 +2,7 @@
 #define SRC_BELLMAN_FORD_HPP_
 
 #include "utils.hpp"
-
+#include <vector>
 /**
  * @file bellman_ford.hpp
  * @author Bor Grošelj Simić <bor.groseljsimic@telemach.net>
@@ -15,6 +15,6 @@
  * @param vertex The vertex from which distances are measured
  * @returns Vector of distances from the base vertex
  */
-vector<int> bellman_ford(const wweightde_graf_t& graph, int vertex);
+std::vector<int> bellman_ford(const weighted_graf_t& graph, int vertex);
 
 #endif //SRC_BELLMAN_FORD_HPP_

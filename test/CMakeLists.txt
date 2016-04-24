@@ -6,6 +6,7 @@ set(TEST_FILES
     bfs_test.cpp
     dfs_test.cpp
     mimimum_spanning_tree_kruskal_test.cpp
+    bellman_ford_test.cpp
 )
 add_executable(tests ${TEST_FILES})
 target_link_libraries(tests grafi gtest gtest_main)
