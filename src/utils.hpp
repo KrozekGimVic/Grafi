@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <utility>
+#include <limits>
 
 /**
  * @file utils.hpp
@@ -12,9 +13,9 @@
 /// Represents a directed graph.
 typedef std::vector<std::vector<int>> graf_t;
 
-/// @brief Represents a directed weighted graph.
+/// Represents a directed weighted graph.
 typedef std::vector<std::vector<std::pair<int, int>>> weighted_graf_t;
 
-const double INFINITY = 1.0 / 0.0;
+const double INFINITY = std::numeric_limits<double>::infinity();
 
 #endif  // SRC_UTILS_HPP_

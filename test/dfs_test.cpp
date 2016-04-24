@@ -1,6 +1,6 @@
-#include "gtest/gtest.h"
-#include "typedefs.hpp"
 #include "dfs.hpp"
+
+#include "gtest/gtest.h"
 
 TEST (CountComponentsDfs, Connected) {
 	graf_t g = {{1, 2}, {0, 3}, {0, 1}, {1, 2}};

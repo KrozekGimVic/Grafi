@@ -1,7 +1,7 @@
 #ifndef SRC_TOPOLOGICAL_SORT_BFS_HPP_
 #define SRC_TOPOLOGICAL_SORT_BFS_HPP_
 
-#include "typedefs.hpp"
+#include "utils.hpp"
 
 #include <iostream>
 #include <vector>
