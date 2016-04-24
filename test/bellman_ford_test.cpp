@@ -8,7 +8,7 @@ TEST(BellmanFord, UniqueResult) {
                             {std::pair<int,int>(3,1)}, {std::pair<int,int>(3,1), std::pair<int,int>(4,4)},
                             {std::pair<int,int>(5,9), std::pair<int,int>(4,-1)},
                             {std::pair<int,int>(6,3)}, {std::pair<int,int>(6,1)}, {}};
-    std::vector<int> expectedResult = {0, 2, 1, 2, 1, 11, 4};
+    std::vector<double> expectedResult = {0, 2, 1, 2, 1, 11, 4};
 
     EXPECT_EQ(expectedResult, bellman_ford(graph,0));
 

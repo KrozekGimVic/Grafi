@@ -1,8 +1,7 @@
 #include "floyd_warshall.hpp"
-#include <iostream>
 
 std::vector<std::vector<double>> floyd_warshall(const weighted_graf_t& graph) {
-    const unsigned long N = graph.size();
+    const int N = static_cast<int>(graph.size());
     std::vector<std::vector<double>> distance(N, std::vector<double>(N, INFINITY));
 
     for (int vertex_index = 0; vertex_index < N; ++vertex_index) {

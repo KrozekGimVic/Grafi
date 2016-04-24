@@ -15,6 +15,6 @@
  * @param vertex The vertex from which distances are measured
  * @returns Vector of distances from the base vertex
  */
-std::vector<int> bellman_ford(const weighted_graf_t& graph, int vertex);
+std::vector<double> bellman_ford(const weighted_graf_t& graph, int vertex);
 
 #endif //SRC_BELLMAN_FORD_HPP_

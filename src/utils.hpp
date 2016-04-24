@@ -15,6 +15,6 @@ typedef std::vector<std::vector<int>> graf_t;
 /// @brief Represents a directed weighted graph.
 typedef std::vector<std::vector<std::pair<int, int>>> weighted_graf_t;
 
-const float INFINITY = 1.0 / 0.0;
+const double INFINITY = 1.0 / 0.0;
 
 #endif  // SRC_UTILS_HPP_

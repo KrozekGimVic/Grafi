@@ -2,6 +2,11 @@
 #define SRC_MINIMUM_SPANNING_TREE_KRUSKAL_HPP_
 
 #include "utils.hpp"
+#include <vector>
+#include <limits>
+#include <algorithm>
+#include <tuple>
+#include <iostream>
 
 /**
  * @file minimum_spanning_tree_kruskal.hpp
