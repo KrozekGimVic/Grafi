@@ -5,5 +5,6 @@ set(SOURCE_FILES
     dfs.cpp
     minimum_spanning_tree_kruskal.cpp
     bellman_ford.cpp
+    floyd_warshall.cpp
 )
 add_library(grafi ${SOURCE_FILES})
