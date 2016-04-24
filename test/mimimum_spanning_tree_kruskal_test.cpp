@@ -10,8 +10,8 @@ TEST(MinimumSpanningTreeKruskal, Basic) {
     EXPECT_EQ(4, sum_of_paths_minimum_spanning_tree(g));
     g = {{{1, 1}}, {{2, 2}}, {{3, 3}}, {{4, 4}}, {}};
     EXPECT_EQ(10, sum_of_paths_minimum_spanning_tree(g));
-//    g = {{{1, 10}, {2, 1}, {3, 10}}, {{3, 1}}, {}};
-//    EXPECT_EQ(2, sum_of_paths_minimum_spanning_tree(g));
+    g = {{{1, 10}, {2, 1}, {3, 10}}, {{3, 1}}, {{1, 1}}, {}};
+    EXPECT_EQ(3, sum_of_paths_minimum_spanning_tree(g));
     g = {{{1, 1}, {2, 1}, {3, 1}}, {{2, 1}, {3, 1}}, {{3, 1}}, {}};
     EXPECT_EQ(3, sum_of_paths_minimum_spanning_tree(g));
     g = {{{1, 2}}, {{0, 1}}};
