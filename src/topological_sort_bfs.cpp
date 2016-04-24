@@ -1,3 +1,6 @@
+#include <vector>
+#include <queue>
+
 #include "topological_sort_bfs.hpp"
 
 using std::vector;
