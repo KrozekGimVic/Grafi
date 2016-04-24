@@ -1,7 +1,8 @@
 #include "topological_sort_bfs.hpp"
 
-#include "gtest/gtest.h"
 #include <vector>
+
+#include "gtest/gtest.h"
 
 using std::vector;
 

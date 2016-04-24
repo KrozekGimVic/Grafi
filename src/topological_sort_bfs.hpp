@@ -1,11 +1,11 @@
 #ifndef SRC_TOPOLOGICAL_SORT_BFS_HPP_
 #define SRC_TOPOLOGICAL_SORT_BFS_HPP_
 
-#include "utils.hpp"
-
 #include <iostream>
 #include <vector>
 #include <queue>
+
+#include "utils.hpp"
 
 /**
  * @file: topological_sort_bfs.cpp
