@@ -2,22 +2,6 @@
 
 using std::vector;
 
-/**
- * @file: topological_sort_bfs.cpp
- * @author: Rok Kos
- * @date: 20.04.2016
- */
-
-/**
- * \briff Topologicaly sort graph
- * 
- * Algorithm that sorts directed acyclic graph wiht dfs algorihtm.
- * 
- * \param g an input graph
- * 
- * \return Topological sorted graph 
- * 
- */
 vector<int> topological_sort_bfs(const graf_t& g) {
     int N = g.size();  // size of graph
 

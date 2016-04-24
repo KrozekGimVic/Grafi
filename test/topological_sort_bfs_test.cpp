@@ -24,11 +24,9 @@ TEST(topological_sort_bfs, CyclicGraph) {
   vector<int> expetedResult = {};
 
   EXPECT_EQ(expetedResult, topological_sort_bfs(g));
-}
 
-TEST(topological_sort_bfs, CyclicGraph2) {
-  graf_t g = {{1}, {2}, {3}, {4}, {0}};
-  vector<int> expetedResult = {};
+  g = {{1}, {2}, {3}, {4}, {0}};
+  expetedResult = {};
 
   EXPECT_EQ(expetedResult, topological_sort_bfs(g));
 }
