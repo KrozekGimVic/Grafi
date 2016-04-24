@@ -1,0 +1,47 @@
+\hypertarget{bellman__ford_8hpp}{}\section{src/bellman\+\_\+ford.hpp File Reference}
+\label{bellman__ford_8hpp}\index{src/bellman\+\_\+ford.\+hpp@{src/bellman\+\_\+ford.\+hpp}}
+
+
+Implementation of Bellman-\/\+Ford algorithm.  
+
+
+{\ttfamily \#include \char`\"{}utils.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \hyperlink{bellman__ford_8hpp_a95db8ef166bb6e5dbd3cf39f318970bd}{bellman\+\_\+ford} (const \hyperlink{utils_8hpp_acc38130141c53c6860591db1ec5dd221}{weighted\+\_\+graf\+\_\+t} \&graph, int vertex)
+\begin{DoxyCompactList}\small\item\em Computes weights from base vertex for whole graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of Bellman-\/\+Ford algorithm. 
+
+\begin{DoxyAuthor}{Author}
+Bor Grošelj Simić \href{mailto:bor.groseljsimic@telemach.net}{\tt bor.\+groseljsimic@telemach.\+net} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\index{bellman\+\_\+ford.\+hpp@{bellman\+\_\+ford.\+hpp}!bellman\+\_\+ford@{bellman\+\_\+ford}}
+\index{bellman\+\_\+ford@{bellman\+\_\+ford}!bellman\+\_\+ford.\+hpp@{bellman\+\_\+ford.\+hpp}}
+\subsubsection[{\texorpdfstring{bellman\+\_\+ford(const weighted\+\_\+graf\+\_\+t \&graph, int vertex)}{bellman_ford(const weighted_graf_t &graph, int vertex)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ bellman\+\_\+ford (
+\begin{DoxyParamCaption}
+\item[{const {\bf weighted\+\_\+graf\+\_\+t} \&}]{graph, }
+\item[{int}]{vertex}
+\end{DoxyParamCaption}
+)}\hypertarget{bellman__ford_8hpp_a95db8ef166bb6e5dbd3cf39f318970bd}{}\label{bellman__ford_8hpp_a95db8ef166bb6e5dbd3cf39f318970bd}
+
+
+Computes weights from base vertex for whole graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The input graph \\
+\hline
+{\em vertex} & The vertex from which distances are measured \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of distances from the base vertex 
+\end{DoxyReturn}

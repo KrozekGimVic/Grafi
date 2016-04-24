@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Grafi: src/minimum_spanning_tree_kruskal.hpp File Reference</title>
+<title>Grafi: src/topological_sort_bfs.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,62 +85,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">minimum_spanning_tree_kruskal.hpp File Reference</div>  </div>
+<div class="title">topological_sort_bfs.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Kruskal's minimum spanning tree algorithm.  
+<p>Topological bfs sort.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="utils_8hpp_source.html">utils.hpp</a>&quot;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;limits&gt;</code><br />
-<code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;tuple&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-</div>
-<p><a href="minimum__spanning__tree__kruskal_8hpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structedge.html">edge</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents weighted edge from vertex a to vertex b, with weight w.  <a href="structedge.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &quot;topological_sort_bfs.hpp&quot;</code><br />
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af9946a32cc83c27e737f5b23b2d22bf6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minimum__spanning__tree__kruskal_8hpp.html#af9946a32cc83c27e737f5b23b2d22bf6">sum_of_paths_minimum_spanning_tree</a> (const <a class="el" href="utils_8hpp.html#acc38130141c53c6860591db1ec5dd221">weighted_graf_t</a> &amp;graph)</td></tr>
-<tr class="memdesc:af9946a32cc83c27e737f5b23b2d22bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates minimum spanning tree from given undirected weighted graph.  <a href="#af9946a32cc83c27e737f5b23b2d22bf6">More...</a><br /></td></tr>
-<tr class="separator:af9946a32cc83c27e737f5b23b2d22bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9280fc99d5d732e9291ba7edcf2cc976"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="topological__sort__bfs_8cpp.html#a9280fc99d5d732e9291ba7edcf2cc976">topological_sort_bfs</a> (const <a class="el" href="utils_8hpp.html#ab6d5f39dde62fe638e7ae8c99987f917">graf_t</a> &amp;g)</td></tr>
+<tr class="memdesc:a9280fc99d5d732e9291ba7edcf2cc976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Topologicaly sort graph.  <a href="#a9280fc99d5d732e9291ba7edcf2cc976">More...</a><br /></td></tr>
+<tr class="separator:a9280fc99d5d732e9291ba7edcf2cc976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Kruskal's minimum spanning tree algorithm. </p>
-<dl class="section author"><dt>Author</dt><dd>Matej Marinko <a href="#" onclick="location.href='mai'+'lto:'+'mat'+'ej'+'mar'+'in'+'ko1'+'23'+'@gm'+'ai'+'l.c'+'om'; return false;">matej<span style="display: none;">.nosp@m.</span>mari<span style="display: none;">.nosp@m.</span>nko12<span style="display: none;">.nosp@m.</span>3@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<div class="textblock"><p>Topological bfs sort. </p>
+<dl class="section author"><dt>Author</dt><dd>: Rok Kos <a href="#" onclick="location.href='mai'+'lto:'+'roc'+'ki'+'555'+'5@'+'gma'+'il'+'.co'+'m'; return false;">rocki<span style="display: none;">.nosp@m.</span>5555<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>: 20.04.2016 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="af9946a32cc83c27e737f5b23b2d22bf6"></a>
+<a class="anchor" id="a9280fc99d5d732e9291ba7edcf2cc976"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int sum_of_paths_minimum_spanning_tree </td>
+          <td class="memname">vector&lt;int&gt; topological_sort_bfs </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="utils_8hpp.html#acc38130141c53c6860591db1ec5dd221">weighted_graf_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>graph</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="utils_8hpp.html#ab6d5f39dde62fe638e7ae8c99987f917">graf_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates minimum spanning tree from given undirected weighted graph. </p>
+<p>Topologicaly sort graph. </p>
+<p>Algorithm that sorts directed acyclic graph wiht dfs algorihtm.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">graph</td><td>A undirected weighted graph. </td></tr>
+    <tr><td class="paramname">g</td><td>an input graph</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Sum of weights on edges of minimum spanning tree. If mimimum spanning tree for given graph does not exist, returns max integer value. For empty graphs returns 0. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Topological sorted graph </dd></dl>
 
 </div>
 </div>

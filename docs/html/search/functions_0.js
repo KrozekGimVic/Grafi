@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['count_5fcomponents_5fbfs',['count_components_bfs',['../bfs_8hpp.html#a48862b84b0a32f37b35f9b33f83d8ee2',1,'bfs.cpp']]]
+  ['bellman_5fford',['bellman_ford',['../bellman__ford_8hpp.html#a95db8ef166bb6e5dbd3cf39f318970bd',1,'bellman_ford.cpp']]]
 ];
