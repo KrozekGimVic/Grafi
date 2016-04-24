@@ -23,5 +23,4 @@ std::vector<std::vector<double>> floyd_warshall(const weighted_graf_t& graph) {
     }
 
     return distance;
-
 }

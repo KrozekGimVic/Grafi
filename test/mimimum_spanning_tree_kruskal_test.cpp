@@ -4,9 +4,9 @@
 #include "gtest/gtest.h"
 
 TEST(MinimumSpanningTreeKruskal, Basic) {
-    weighted_graf_t g = { {{1, 1}, {2, 2}}, {{2, 2}}, {} };
+    weighted_graf_t g = {{{1, 1}, {2, 2}}, {{2, 2}}, {}};
     EXPECT_EQ(3, sum_of_paths_minimum_spanning_tree(g));
-    g = { {{1, 1}, {2, 1}, {3, 1}, {4, 1}}, {}, {}, {}, {}};
+    g = {{{1, 1}, {2, 1}, {3, 1}, {4, 1}}, {}, {}, {}, {}};
     EXPECT_EQ(4, sum_of_paths_minimum_spanning_tree(g));
     g = {{{1, 1}}, {{2, 2}}, {{3, 3}}, {{4, 4}}, {}};
     EXPECT_EQ(10, sum_of_paths_minimum_spanning_tree(g));

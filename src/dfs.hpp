@@ -5,4 +5,4 @@
 
 int count_components_dfs(const graf_t& g);
 
-#endif // GRAFI_SRC_DFS_HPP
+#endif  // GRAFI_SRC_DFS_HPP

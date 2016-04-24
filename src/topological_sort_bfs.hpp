@@ -15,16 +15,11 @@
  */
 
 /**
- * @brief Topologicaly sort graph
- * 
+ * @brief Topologically sort a graph.
  * Algorithm that sorts directed acyclic graph wiht dfs algorihtm.
- * 
  * @param g an input graph
- * 
- * @return Topological sorted graph 
- * 
+ * @return Topologically sorted graph.
  */
-
 std::vector<int> topological_sort_bfs(const graf_t& g);
 
 #endif  // SRC_TOPOLOGICAL_SORT_BFS_HPP_

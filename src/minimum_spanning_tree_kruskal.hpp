@@ -12,9 +12,7 @@
 /// @brief Represents weighted edge from vertex a to vertex b, with weight w.
 struct edge {
     int a, b, w;
-    bool operator<(const edge& e) const {
-        return w < e.w;
-    }
+    bool operator<(const edge& e) const { return w < e.w; }
 };
 
 /**

@@ -1,8 +1,8 @@
 #ifndef SRC_BELLMAN_FORD_HPP_
 #define SRC_BELLMAN_FORD_HPP_
 
-#include "utils.hpp"
 #include <vector>
+#include "utils.hpp"
 /**
  * @file bellman_ford.hpp
  * @author Bor Grošelj Simić <bor.groseljsimic@telemach.net>
@@ -17,4 +17,4 @@
  */
 std::vector<double> bellman_ford(const weighted_graf_t& graph, int vertex);
 
-#endif //SRC_BELLMAN_FORD_HPP_
+#endif  // SRC_BELLMAN_FORD_HPP_
