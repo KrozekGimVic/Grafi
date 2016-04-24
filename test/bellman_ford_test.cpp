@@ -1,7 +1,7 @@
 #include "bellman_ford.hpp"
 
-#include "gtest/gtest.h"
 #include <vector>
+#include "gtest/gtest.h"
 
 TEST(BellmanFord, UniqueResult) {
     weighted_graf_t graph = {{{1, 2}, {2, 1}}, {{3, 1}}, {{3, 1}, {4, 4}},

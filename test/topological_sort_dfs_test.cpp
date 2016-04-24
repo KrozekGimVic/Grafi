@@ -1,7 +1,6 @@
 #include "topological_sort_dfs.hpp"
-#include "gtest/gtest.h"
 #include <vector>
-#include <iostream>
+#include "gtest/gtest.h"
 
 TEST(DfsTopologicalSort, UniqueResult) {
     graf_t graph = {{1, 2}, {3, 4}, {1, 3, 4}, {}, {}};
