@@ -114,20 +114,10 @@ if [ "$STYLECHECK" = "true" ]; then
     showinfo "Checking code style ..."
 
     STYLEFILTERS="-legal,-runtime/reference,-readability/streams"
-    ERRORCODE=0
-    for i in `find -regex '\./\(src\|test\)\/.*\.\(cpp\|hpp\)' | grep -v "tinyxml" | grep -v \
-              "ann_1.1.2" | grep -v "amgcl" | grep -vI "eigen" | grep -v "pcm"`
-    do
-        dir=`mktemp -d`
+    find -regex '\./\(src\|test\)\/.*\.\(cpp\|hpp\)' | xargs -n 1  -P 8 \
         python2 scripts/cpplint.py "--filter=$STYLEFILTERS" "--linelength=100" \
-                                   "--extensions=cpp,hpp" "$i" 2> "$dir/out"
-        exit_code=$?
-        if [ $exit_code -ne 0 ]; then
-            cat "$dir/out"
-        fi
-        rm -r $dir
-        ERRORCODE=$(($ERRORCODE+$exit_code))
-    done
+                                   "--extensions=cpp,hpp"
+    ERRORCODE=$?;
     if [ $ERRORCODE -ne 0 ]; then
         error "Error: there were sytle mistakes!"
         echo "(If you feel errors are unjust, edit this file and add exceptions (ln. 103).)"
