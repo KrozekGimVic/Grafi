@@ -9,16 +9,13 @@
  * @brief Kruskal's minimum spanning tree algorithm.
  */
 
-/// @brief Represents weighted edge.
-struct edge {
-    /// Starting vertex.
-    int a;
-    /// Ending vertex.
-    int b;
-    /// Weight of an edge.
-    int w;
+/// Represents weighted edge.
+struct Edge {
+    int a;  ///< Starting vertex.
+    int b;  ///< Ending vertex.
+    double w;  ///< Weight of an edge.
     /// Comparison of weights of edges.
-    bool operator<(const edge& e) const { return w < e.w; }
+    bool operator<(const Edge& e) const;
 };
 
 /**
