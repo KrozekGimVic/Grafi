@@ -11,4 +11,5 @@ include_directories(src test)
 add_subdirectory(src)
 add_subdirectory(test)
 
-add_custom_target(docs COMMAND doxygen ${CMAKE_SOURCE_DIR}/docs/Doxyfile > /dev/null)
+add_custom_target(docs COMMAND doxygen docs/Doxyfile > /dev/null
+                       WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
