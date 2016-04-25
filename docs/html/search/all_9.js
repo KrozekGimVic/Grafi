@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weighted_5fgraf_5ft',['weighted_graf_t',['../utils_8hpp.html#acc38130141c53c6860591db1ec5dd221',1,'utils.hpp']]]
+  ['sum_5fof_5fpaths_5fminimum_5fspanning_5ftree',['sum_of_paths_minimum_spanning_tree',['../minimum__spanning__tree__kruskal_8hpp.html#af9946a32cc83c27e737f5b23b2d22bf6',1,'minimum_spanning_tree_kruskal.cpp']]]
 ];
