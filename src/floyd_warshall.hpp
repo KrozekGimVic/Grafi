@@ -1,8 +1,8 @@
-#ifndef GRAFI_FLOYD_WARSHALL_HPP
-#define GRAFI_FLOYD_WARSHALL_HPP
+#ifndef SRC_FLOYD_WARSHALL_HPP_
+#define SRC_FLOYD_WARSHALL_HPP_
 
-#include "utils.hpp"
 #include <vector>
+#include "utils.hpp"
 
 /**
  * @file floyd_warshall.hpp
@@ -17,4 +17,4 @@
  */
 std::vector<std::vector<double>> floyd_warshall(const weighted_graf_t& graph);
 
-#endif  // GRAFI_FLOYD_WARSHALL_HPP
+#endif  // SRC_FLOYD_WARSHALL_HPP_

@@ -1,10 +1,8 @@
-#ifndef GRAFI_TOPOLOGICAL_SORT_DFS_HPP
-#define GRAFI_TOPOLOGICAL_SORT_DFS_HPP
+#ifndef SRC_TOPOLOGICAL_SORT_DFS_HPP_
+#define SRC_TOPOLOGICAL_SORT_DFS_HPP_
 
-#include "utils.hpp"
 #include <vector>
-#include <iostream>
-#include <algorithm>
+#include "utils.hpp"
 
 /**
  * @file topological_sort_dfs.hpp
@@ -27,7 +25,8 @@ namespace topological_sort_dfs_internal {
      * @param start_node Starting vertex for path search.
      * @returns Reversed topologically sorted vertices from starting vertex.
      */
-    std::vector<int> topological_sort(const graf_t &graph, std::vector<bool> &visited, int start_node);
-}
+    std::vector<int> topological_sort(const graf_t &graph, std::vector<bool> &visited,
+                                                                        int start_node);
+}  // namespace topological_sort_dfs_internal
 
-#endif  // GRAFI_DFS_TOPOLOGICAL_SORT_HPP
+#endif  // SRC_TOPOLOGICAL_SORT_DFS_HPP_
