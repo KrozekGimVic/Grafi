@@ -4,7 +4,6 @@
 #include <limits>
 #include <algorithm>
 #include <tuple>
-#include <iostream>
 
 bool union_find(int a, int b, std::vector<int>& parent, std::vector<int>& rank) {
     int parent_a = a, parent_b = b;

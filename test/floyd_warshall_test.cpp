@@ -1,4 +1,5 @@
 #include "floyd_warshall.hpp"
+#include <vector>
 #include "gtest/gtest.h"
 
 TEST(FloydWarshall, Basic) {
