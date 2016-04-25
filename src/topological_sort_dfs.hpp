@@ -20,7 +20,14 @@
 std::vector<int> topological_sort_dfs(const graf_t &graph);
 
 namespace topological_sort_dfs_internal {
-std::vector<int> topological_sort(const graf_t &graph, std::vector<bool> &visited, int startNode);
+    /**
+     * @brief topolgical_sort_helper_function
+     * @param graph A directed graph
+     * @param visited Vector of visited nodes, shared between function calls.
+     * @param start_node Starting vertex for path search.
+     * @returns Reversed topologically sorted vertices from starting vertex.
+     */
+    std::vector<int> topological_sort(const graf_t &graph, std::vector<bool> &visited, int start_node);
 }
 
 #endif  // GRAFI_DFS_TOPOLOGICAL_SORT_HPP

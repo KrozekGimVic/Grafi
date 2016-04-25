@@ -1,10 +1,10 @@
 #include "topological_sort_dfs.hpp"
 
 std::vector<int> topological_sort_dfs_internal::topological_sort(const graf_t &graph, std::vector<bool> &visited,
-                                                                 int startNode) {
-    std::vector<int> indices = graph[startNode];
+                                                                 int start_node) {
+    std::vector<int> indices = graph[start_node];
 
-    visited[startNode] = true;
+    visited[start_node] = true;
 
     std::vector<int> result;
 
@@ -17,7 +17,7 @@ std::vector<int> topological_sort_dfs_internal::topological_sort(const graf_t &g
         result.insert(result.end(), buff.begin(), buff.end());
     }
 
-    result.push_back(startNode);
+    result.push_back(start_node);
     return result;
 }
 
