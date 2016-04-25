@@ -26,7 +26,7 @@ namespace topological_sort_dfs_internal {
      * @returns Reversed topologically sorted vertices from starting vertex.
      */
     std::vector<int> topological_sort(const graf_t &graph, std::vector<bool> &visited,
-                                                                        int start_node);
+                                      int start_node);
 }  // namespace topological_sort_dfs_internal
 
 #endif  // SRC_TOPOLOGICAL_SORT_DFS_HPP_

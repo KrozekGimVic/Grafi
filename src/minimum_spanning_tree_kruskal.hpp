@@ -24,7 +24,7 @@ struct edge {
 /**
  * @brief Creates minimum spanning tree from given undirected weighted graph.
  * @param graph A undirected weighted graph.
- * @returns Sum of weights on edges of minimum spanning tree. If mimimum spanning
+ * @returns Sum of weights on edges of minimum spanning tree. If minimum spanning
  * tree for given graph does not exist, returns max integer value. For empty graphs returns 0.
  */
 int sum_of_paths_minimum_spanning_tree(const weighted_graf_t& graph);
