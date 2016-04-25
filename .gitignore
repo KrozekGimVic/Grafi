@@ -34,3 +34,5 @@
 build/
 bin/
 lib/
+docs/html/
+docs/latex/
