@@ -16,7 +16,7 @@
 
 /**
  * @brief Topologically sort a graph.
- * Algorithm that sorts directed acyclic graph wiht dfs algorihtm.
+ * Algorithm that sorts directed acyclic graph with dfs algorithm.
  * @param g an input graph
  * @return Topologically sorted graph.
  */

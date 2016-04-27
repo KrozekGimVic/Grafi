@@ -10,7 +10,7 @@ vector<int> topological_sort_bfs(const graf_t& g) {
 
     vector<int> ind(N, 0);  // vector that hold how many path lead to current vertex
 
-    // goes thru graph and count path to each vertex
+    // goes through graph and count path to each vertex
     for (int i = 0; i < N; ++i) {
         for (int v : g[i]) {
             ind[v]++;
@@ -18,7 +18,7 @@ vector<int> topological_sort_bfs(const graf_t& g) {
     }
 
     std::queue<int> q;  // queue that hold next vertex in line
-    // push in queue all vertax that have no path leading to them
+    // push in queue all vertices that have no path leading to them
     for (int i = 0; i < N; ++i) {
         if (ind[i] == 0) {
             q.push(i);
@@ -29,12 +29,12 @@ vector<int> topological_sort_bfs(const graf_t& g) {
     vector<int> empty = {};  // vector that we return when graph is invalid
 
     while (!q.empty()) {
-        // get firts from queue
+        // get first from queue
         int curInd = q.front();
         q.pop();
         dag.push_back(curInd);
 
-        // go thru all his neighbours
+        // go through all his neighbours
         for (int v : g[curInd]) {
             ind[v]--;
 
@@ -43,7 +43,7 @@ vector<int> topological_sort_bfs(const graf_t& g) {
                 q.push(v);
             }
 
-            // if we went thru one vertex more than once
+            // if we went through one vertex more than once
             // that means that there is cycle or this is invalid graph
             if (ind[v] < 0) {
                 return empty;
@@ -53,7 +53,7 @@ vector<int> topological_sort_bfs(const graf_t& g) {
 
     int dag_size = dag.size();
 
-    // if queue was empty before we went thru all vertex that means that there was cycle
+    // if queue was empty before we went through all vertex that means that there was cycle
     if (dag_size < N) {
         return empty;
     }
