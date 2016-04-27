@@ -7,19 +7,24 @@
 
 bool Edge::operator<(const Edge& e) const { return w < e.w; }
 
-bool union_find(int a, int b, std::vector<int>& parent, std::vector<int>& rank) {
-    int parent_a = a, parent_b = b;
-    while (parent[parent_a] != parent_a) parent_a = parent[parent_a];
-    while (parent[parent_b] != parent_b) parent_b = parent[parent_b];
-    if (parent_a == parent_b) return false;
+int Find(int a, std::vector<int>& parent) {
+    if (parent[a] != a) parent[a] = Find(parent[a], parent);
+    return parent[a];
+}
 
-    if (rank[parent_a] < rank[parent_b]) {
-        parent[parent_a] = parent_b;
-    } else if (rank[parent_a] > rank[parent_b]) {
-        parent[parent_b] = parent_a;
+bool Union(int a, int b, std::vector<int>& parent, std::vector<int>& rank) {
+    // lowercase `union` means something in c++
+    a = Find(a, parent);
+    b = Find(b, parent);
+    if (a == b) return false;
+
+    if (rank[a] < rank[b]) {
+        parent[a] = b;
+    } else if (rank[a] > rank[b]) {
+        parent[b] = a;
     } else {
-        parent[parent_a] = parent_b;
-        rank[parent_a]++;
+        parent[a] = b;
+        rank[a]++;
     }
     return true;
 }
@@ -42,7 +47,7 @@ int sum_of_paths_minimum_spanning_tree(const weighted_graf_t& graph) {
     for (int i = 0; i < n; ++i) parent[i] = i;
 
     for (const Edge& e : edges) {
-        if (union_find(e.a, e.b, parent, rank)) {
+        if (Union(e.a, e.b, parent, rank)) {
             sum += e.w;
             edge_count++;
         }
