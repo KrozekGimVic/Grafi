@@ -22,11 +22,12 @@ namespace topological_sort_dfs_internal {
      * @brief topolgical_sort_helper_function
      * @param graph A directed graph
      * @param visited Vector of visited nodes, shared between function calls.
+     * @param visited_vertices Vector of visited vertices, used to recognize cycles.
      * @param start_node Starting vertex for path search.
      * @returns Reversed topologically sorted vertices from starting vertex.
      */
-    std::vector<int> topological_sort(const graf_t &graph, std::vector<bool> &visited,
-                                      int start_node);
+    std::vector<int> topological_sort(const graf_t &graph, std::vector<bool>& visited,
+                                      std::vector<int> visited_vertices, int start_node);
 }  // namespace topological_sort_dfs_internal
 
 #endif  // SRC_TOPOLOGICAL_SORT_DFS_HPP_
