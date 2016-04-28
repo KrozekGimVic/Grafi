@@ -7,15 +7,14 @@
 
 bool Edge::operator<(const Edge& e) const { return w < e.w; }
 
-int Find(int a, std::vector<int>& parent) {
-    if (parent[a] != a) parent[a] = Find(parent[a], parent);
+int find(int a, std::vector<int>& parent) {
+    if (parent[a] != a) parent[a] = find(parent[a], parent);
     return parent[a];
 }
 
-bool Union(int a, int b, std::vector<int>& parent, std::vector<int>& rank) {
-    // lowercase `union` means something in c++
-    a = Find(a, parent);
-    b = Find(b, parent);
+bool union_components(int a, int b, std::vector<int>& parent, std::vector<int>& rank) {
+    a = find(a, parent);
+    b = find(b, parent);
     if (a == b) return false;
 
     if (rank[a] < rank[b]) {
@@ -29,7 +28,7 @@ bool Union(int a, int b, std::vector<int>& parent, std::vector<int>& rank) {
     return true;
 }
 
-int sum_of_paths_minimum_spanning_tree(const weighted_graf_t& graph) {
+double sum_of_paths_minimum_spanning_tree(const weighted_graf_t& graph) {
     int n = graph.size();
     std::vector<Edge> edges;
     for (int v = 0; v < n; ++v) {
@@ -47,12 +46,12 @@ int sum_of_paths_minimum_spanning_tree(const weighted_graf_t& graph) {
     for (int i = 0; i < n; ++i) parent[i] = i;
 
     for (const Edge& e : edges) {
-        if (Union(e.a, e.b, parent, rank)) {
+        if (union_components(e.a, e.b, parent, rank)) {
             sum += e.w;
             edge_count++;
         }
         if (edge_count == n - 1) break;
     }
-    if (edge_count < n - 1) return std::numeric_limits<int>::max();
+    if (edge_count < n - 1) return INFINITY;
     return sum;
 }

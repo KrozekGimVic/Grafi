@@ -22,11 +22,13 @@ TEST(MinimumSpanningTreeKruskal, Basic) {
     EXPECT_EQ(-1, sum_of_paths_minimum_spanning_tree(g));
     g = {{{1, 1}}, {{0, -1}}, {{0, -2}, {1, -3}}};
     EXPECT_EQ(-5, sum_of_paths_minimum_spanning_tree(g));
+    g = {{{1, 0.5}, {2, 2.1}}, {{0, 0.1}}, {{1, 4}}};
+    EXPECT_EQ(2.2, sum_of_paths_minimum_spanning_tree(g));
 }
 
 TEST(MinimumSpanningTreeKruskal, SpecialCases) {
     weighted_graf_t g = {{{1, 1}}, {}, {{3, 1}}, {}};  // Not connected
-    EXPECT_EQ(std::numeric_limits<int>::max(), sum_of_paths_minimum_spanning_tree(g));
+    EXPECT_EQ(INFINITY, sum_of_paths_minimum_spanning_tree(g));
     g = {};  // No edges
     EXPECT_EQ(0, sum_of_paths_minimum_spanning_tree(g));
     g = {{{0, 1}}};  // Single node is connected to itself

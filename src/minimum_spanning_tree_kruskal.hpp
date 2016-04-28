@@ -24,6 +24,6 @@ struct Edge {
  * @returns Sum of weights on edges of minimum spanning tree. If minimum spanning
  * tree for given graph does not exist, returns max integer value. For empty graphs returns 0.
  */
-int sum_of_paths_minimum_spanning_tree(const weighted_graf_t& graph);
+double sum_of_paths_minimum_spanning_tree(const weighted_graf_t& graph);
 
 #endif  //  SRC_MINIMUM_SPANNING_TREE_KRUSKAL_HPP_
