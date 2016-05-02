@@ -1,9 +1,9 @@
 #ifndef SRC_DFS_HPP_
 #define SRC_DFS_HPP_
 
-#include "utils.hpp"
-
 #include <vector>
+
+#include "utils.hpp"
 
 /**
  * @file dfs.hpp
