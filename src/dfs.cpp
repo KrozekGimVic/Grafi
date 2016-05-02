@@ -4,23 +4,23 @@
 
 using std::vector;
 
-void dfs(int pos, vector<bool>& v, const graf_t& g) {
+void dfs(int pos, vector<bool>& v, const graf_t& graph) {
     v[pos] = true;
-    int l = g[pos].size();
+    int l = graph[pos].size();
     for (int i = 0; i < l; ++i) {
-        if (!v[g[pos][i]]) {
-            dfs(g[pos][i], v, g);
+        if (!v[graph[pos][i]]) {
+            dfs(graph[pos][i], v, graph);
         }
     }
 }
 
-int count_components_dfs(const graf_t& g) {
-    int num_of_components = 0, n = g.size();
+int count_components_dfs(const graf_t& graph) {
+    int num_of_components = 0, n = graph.size();
     vector<bool> v(n, false);
     for (int i = 0; i < n; ++i) {
         if (!v[i]) {
             ++num_of_components;
-            dfs(i, v, g);
+            dfs(i, v, graph);
         }
     }
     return num_of_components;
