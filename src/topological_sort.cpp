@@ -115,3 +115,20 @@ vector<int> topological_sort_bfs(const graf_t& g) {
 
     return dag;
 }
+
+bool is_topologically_sorted(const vector<int>& vertices, const graf_t& dag) {
+    int N = dag.size();
+    vector<int> places(N);
+    for (int i = 0; i < N; ++i) {
+        places[vertices[i]] = i;
+    }
+
+    for (int i = 0; i < N; ++i) {
+        for (int u : dag[i]) {
+            if (places[u] <= places[i]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}

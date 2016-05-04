@@ -6,6 +6,29 @@
 
 using std::vector;
 
+TEST(TopologicalSort, IsTopologicallySorted) {
+    EXPECT_TRUE(is_topologically_sorted({0}, {{}}));
+
+    EXPECT_TRUE(is_topologically_sorted({0, 1}, {{1}, {}}));
+    EXPECT_FALSE(is_topologically_sorted({1, 0}, {{1}, {}}));
+
+    EXPECT_TRUE(is_topologically_sorted({1, 0}, {{}, {0}}));
+    EXPECT_FALSE(is_topologically_sorted({0, 1}, {{}, {0}}));
+
+    EXPECT_TRUE(is_topologically_sorted({3, 2, 4, 0, 1}, {{}, {}, {0}, {2, 4}, {1, 0}}));
+    EXPECT_TRUE(is_topologically_sorted({3, 2, 4, 1, 0}, {{}, {}, {0}, {2, 4}, {1, 0}}));
+    EXPECT_TRUE(is_topologically_sorted({3, 4, 2, 0, 1}, {{}, {}, {0}, {2, 4}, {1, 0}}));
+    EXPECT_TRUE(is_topologically_sorted({3, 4, 2, 1, 0}, {{}, {}, {0}, {2, 4}, {1, 0}}));
+    EXPECT_TRUE(is_topologically_sorted({3, 4, 1, 2, 0}, {{}, {}, {0}, {2, 4}, {1, 0}}));
+
+    EXPECT_FALSE(is_topologically_sorted({3, 2, 0, 4, 1}, {{}, {}, {0}, {2, 4}, {1, 0}}));
+    EXPECT_FALSE(is_topologically_sorted({3, 4, 1, 0, 2}, {{}, {}, {0}, {2, 4}, {1, 0}}));
+    EXPECT_FALSE(is_topologically_sorted({0, 1, 2, 3, 4}, {{}, {}, {0}, {2, 4}, {1, 0}}));
+
+    EXPECT_TRUE(is_topologically_sorted({0, 1}, {{}, {}}));
+    EXPECT_TRUE(is_topologically_sorted({1, 0}, {{}, {}}));
+}
+
 TEST(TopologicalSortDfs, UniqueResult) {
     graf_t graph = {{1, 2}, {3, 4}, {1, 3, 4}, {}, {}};
     vector<int> expectedResult = {0, 2, 1, 4, 3};
