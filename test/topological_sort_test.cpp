@@ -52,21 +52,37 @@ TEST(TopologicalSortDfs, CyclicGraph) {
     EXPECT_EQ(expetedResult, topological_sort_dfs(graph));
 }
 
-TEST(topological_sort_bfs, UniqueResult) {
+TEST(TopologicalSortBfs, UniqueResult) {
+    EXPECT_EQ(vector<int>({0, 1}), topological_sort_bfs({{1}, {}}));
+    EXPECT_EQ(vector<int>({1, 0}), topological_sort_bfs({{}, {0}}));
+
     graf_t g = {{1}, {2}, {3}, {}};
     vector<int> expetedResult = {0, 1, 2, 3};
+    EXPECT_EQ(expetedResult, topological_sort_bfs(g));
 
+    g = {{1}, {}, {0}, {2, 4}, {0, 1, 2}};
+    expetedResult = {3, 4, 2, 0, 1};
     EXPECT_EQ(expetedResult, topological_sort_bfs(g));
 }
 
-// TEST(topological_sort_bfs, UniqueResult2){
-//     graf_t g = {{1,2,3}, {4}, {4,5,6}, {6}, {8,10}, {8,9}, {7}, {}, {9,10}, {}, {}};
-//     vector<int> expetedResult = {0,1,2,3,4,5,6,8,9,7,10};
+TEST(TopologicalSortBfs, General) {
+    graf_t g = {{1, 2, 3}, {4}, {4, 5, 6}, {6}, {8, 10}, {8, 9}, {7}, {}, {9, 10}, {}, {}};
+    vector<int> result = topological_sort_bfs(g);
+    ASSERT_EQ(g.size(), result.size());
+    EXPECT_TRUE(is_topologically_sorted(result, g));
 
-//     EXPECT_EQ(expetedResult, topological_sort_bfs(g));
-// }
+    g = {{}, {}, {}};
+    result = topological_sort_bfs(g);
+    ASSERT_EQ(g.size(), result.size());
+    EXPECT_TRUE(is_topologically_sorted(result, g));
 
-TEST(topological_sort_bfs, CyclicGraph) {
+    g = {{}, {2}, {}, {1}};
+    result = topological_sort_bfs(g);
+    ASSERT_EQ(g.size(), result.size());
+    EXPECT_TRUE(is_topologically_sorted(result, g));
+}
+
+TEST(TopologicalSortBfs, CyclicGraph) {
     graf_t g = {{1, 3}, {2}, {3, 4}, {5, 6}, {1}, {}, {}};
     vector<int> expetedResult = {};
 
@@ -77,3 +93,4 @@ TEST(topological_sort_bfs, CyclicGraph) {
 
     EXPECT_EQ(expetedResult, topological_sort_bfs(g));
 }
+

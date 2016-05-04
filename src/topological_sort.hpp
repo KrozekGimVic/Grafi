@@ -7,7 +7,8 @@
 
 /**
  * @file topological_sort.hpp
- * @author Vid Drobnič <vid.drobnic@gmail.com>, Rok Kos <rocki5555@gmail.com>
+ * @author Vid Drobnič <vid.drobnic@gmail.com>
+ * @author Rok Kos <rocki5555@gmail.com>
  * @brief Algortihms for topological sorting.
  */
 
