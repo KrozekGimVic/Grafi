@@ -102,15 +102,15 @@ All done, feel free to commit.
 ## Work done so far
 * number of connected components using BSF and DFS
 * topological sort on DAG using BFS and DFS
-
-# Plan
-* path from vertex to vertex
 * shortest / longest path in DAG
 * shortest path Dijkstra
 * shortest path Bellman-Ford
 * shortest path Floyd-Warshall
 * minimal spanning tree Prim
 * union-find, minimal spanning tree Kruskal
+
+# Plan
+* path from vertex to vertex
 * strongly connected components
 * lowest common ancestor
 * max-flow / min-cut Edmonds-Karp
@@ -119,7 +119,7 @@ All done, feel free to commit.
 * ...
 
 ## TODO
-Maybe add Travis CI.
+Add Travis CI.
 
 Fun times!
 
