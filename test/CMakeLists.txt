@@ -4,7 +4,7 @@ set(TEST_FILES
     topological_sort_test.cpp
     bfs_test.cpp
     dfs_test.cpp
-    mimimum_spanning_tree_kruskal_test.cpp
+    mimimum_spanning_tree_test.cpp
     bellman_ford_test.cpp
     floyd_warshall_test.cpp
 )
