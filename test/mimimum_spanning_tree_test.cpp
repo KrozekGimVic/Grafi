@@ -14,16 +14,20 @@ TEST(MinimumSpanningTreeKruskal, Basic) {
     EXPECT_EQ(3, sum_of_paths_minimum_spanning_tree_kruskal(g));
     g = {{{1, 1}, {2, 1}, {3, 1}}, {{2, 1}, {3, 1}}, {{3, 1}}, {}};
     EXPECT_EQ(3, sum_of_paths_minimum_spanning_tree_kruskal(g));
-    g = {{{1, 2}}, {{0, 1}}};
+    g = {{{1, 2}, {1, 1}}, {}};
     EXPECT_EQ(1, sum_of_paths_minimum_spanning_tree_kruskal(g));
-    g = {{{1, 1}}, {{0, 2}}};
+    g = {{{1, 1},{1, 2}}, {}};
     EXPECT_EQ(1, sum_of_paths_minimum_spanning_tree_kruskal(g));
-    g = {{{1, -1}}, {{0, 0}}};
+    g = {{{1, -1}, {1, 0}}, {}};
     EXPECT_EQ(-1, sum_of_paths_minimum_spanning_tree_kruskal(g));
-    g = {{{1, 1}}, {{0, -1}}, {{0, -2}, {1, -3}}};
+    g = {{{1, -1}, {2, -2}}, {{0, -1}, {2, -3}}, {{0, -2}, {1, -3}}};
     EXPECT_EQ(-5, sum_of_paths_minimum_spanning_tree_kruskal(g));
-    g = {{{1, 0.5}, {2, 2.1}}, {{0, 0.1}}, {{1, 4}}};
+    g = {{{1, 0.1}, {2, 2.1}}, {{0, 0.1}, {2, 4}}, {{1, 4}, {0, 2.1}}};
     EXPECT_EQ(2.2, sum_of_paths_minimum_spanning_tree_kruskal(g));
+    g = {{}, {{0, 1}}, {{0, 1}}};
+    EXPECT_EQ(2, sum_of_paths_minimum_spanning_tree_kruskal(g));
+    g = {{}, {{0, 1.5}, {2, 1}, {3, 1.5}}, {{0, 2.5}, {3, 1.5}}, {{0, 0.5}}, {{0, 0.5}}};
+    EXPECT_EQ(3.5, sum_of_paths_minimum_spanning_tree_kruskal(g));
 }
 
 TEST(MinimumSpanningTreeKruskal, SpecialCases) {
@@ -36,28 +40,30 @@ TEST(MinimumSpanningTreeKruskal, SpecialCases) {
 }
 
 TEST(MinimumSpanningTreePrim, Basic) {
-    weighted_graf_t g = {{{1, 1}, {2, 2}}, {{0, 1}, {2, 2}}, {{0, 2}, {1, 2}}};
+    weighted_graf_t g = {{{1, 1}, {2, 2}}, {{2, 2}}, {}};
     EXPECT_EQ(3, sum_of_paths_minimum_spanning_tree_prim(g));
-    g = {{{1, 1}, {2, 1}, {3, 1}, {4, 1}}, {{0, 1}}, {{0, 1}}, {{0, 1}}, {{0, 1}}};
+    g = {{{1, 1}, {2, 1}, {3, 1}, {4, 1}}, {}, {}, {}, {}};
     EXPECT_EQ(4, sum_of_paths_minimum_spanning_tree_prim(g));
-    g = {{{1, 1}}, {{0, 1}, {2, 2}}, {{1, 2}, {3, 3}}, {{2, 3}, {4, 4}}, {{3, 4}}};
+    g = {{{1, 1}}, {{2, 2}}, {{3, 3}}, {{4, 4}}, {}};
     EXPECT_EQ(10, sum_of_paths_minimum_spanning_tree_prim(g));
-    g = {{{1, 10}, {2, 1}, {3, 10}}, {{0, 10}, {2, 1}, {3, 1}}, {{0, 1}, {1, 1}},
-    {{0, 10}, {1, 1}}};
+    g = {{{1, 10}, {2, 1}, {3, 10}}, {{3, 1}}, {{1, 1}}, {}};
     EXPECT_EQ(3, sum_of_paths_minimum_spanning_tree_prim(g));
-    g = {{{1, 1}, {2, 1}, {3, 1}}, {{0, 1}, {2, 1}, {3, 1}}, {{0, 1}, {3, 1}},
-    {{0, 1}, {2, 1}}};
+    g = {{{1, 1}, {2, 1}, {3, 1}}, {{2, 1}, {3, 1}}, {{3, 1}}, {}};
     EXPECT_EQ(3, sum_of_paths_minimum_spanning_tree_prim(g));
-    g = {{{1, 1}}, {{0, 1}}};
+    g = {{{1, 2}, {1, 1}}, {}};
     EXPECT_EQ(1, sum_of_paths_minimum_spanning_tree_prim(g));
-    g = {{{1, 2}}, {{0, 2}}};
-    EXPECT_EQ(2, sum_of_paths_minimum_spanning_tree_prim(g));
-    g = {{{1, -1}}, {{0, -1}}};
+    g = {{{1, 1},{1, 2}}, {}};
+    EXPECT_EQ(1, sum_of_paths_minimum_spanning_tree_prim(g));
+    g = {{{1, -1}, {1, 0}}, {}};
     EXPECT_EQ(-1, sum_of_paths_minimum_spanning_tree_prim(g));
     g = {{{1, -1}, {2, -2}}, {{0, -1}, {2, -3}}, {{0, -2}, {1, -3}}};
     EXPECT_EQ(-5, sum_of_paths_minimum_spanning_tree_prim(g));
     g = {{{1, 0.1}, {2, 2.1}}, {{0, 0.1}, {2, 4}}, {{1, 4}, {0, 2.1}}};
     EXPECT_EQ(2.2, sum_of_paths_minimum_spanning_tree_prim(g));
+    // g = {{}, {{0, 1}}, {{0, 1}}};
+    // EXPECT_EQ(2, sum_of_paths_minimum_spanning_tree_prim(g));
+    // g = {{}, {{0, 1.5}, {2, 1}, {3, 1.5}}, {{0, 2.5}, {3, 1.5}}, {{0, 0.5}}, {{0, 0.5}}};
+    // EXPECT_EQ(3.5, sum_of_paths_minimum_spanning_tree_prim(g));
 }
 
 TEST(MinimumSpanningTreePrim, SpecialCases) {
