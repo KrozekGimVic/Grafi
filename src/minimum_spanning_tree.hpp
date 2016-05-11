@@ -21,8 +21,22 @@ struct Edge {
     bool operator<(const Edge& e) const;
 };
 
+/**
+ * @brief Part of a union-find data structure.
+ * @param a Vertex.
+ * @param parent Vector of parents of vertices.
+ * @returns Parent of an edge a.
+ */
 int find(int a, std::vector<int>& parent);
 
+/**
+ * @brief Part of a union-find data structure.
+ * @param a Vertex.
+ * @param b Vertex.
+ * @param parent Vector of parents of vertices.
+ * @param rank Vector of ranks of vertices.
+ * @returns `true` if edge from `a` to `b` is a part of a minimum spanning tree.
+ */
 bool union_components(int a, int b, std::vector<int>& parent, std::vector<int>& rank);
 
 /**

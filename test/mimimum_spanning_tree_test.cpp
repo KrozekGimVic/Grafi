@@ -16,7 +16,7 @@ TEST(MinimumSpanningTreeKruskal, Basic) {
     EXPECT_EQ(3, sum_of_paths_minimum_spanning_tree_kruskal(g));
     g = {{{1, 2}, {1, 1}}, {}};
     EXPECT_EQ(1, sum_of_paths_minimum_spanning_tree_kruskal(g));
-    g = {{{1, 1},{1, 2}}, {}};
+    g = {{{1, 1}, {1, 2}}, {}};
     EXPECT_EQ(1, sum_of_paths_minimum_spanning_tree_kruskal(g));
     g = {{{1, -1}, {1, 0}}, {}};
     EXPECT_EQ(-1, sum_of_paths_minimum_spanning_tree_kruskal(g));
@@ -52,7 +52,7 @@ TEST(MinimumSpanningTreePrim, Basic) {
     EXPECT_EQ(3, sum_of_paths_minimum_spanning_tree_prim(g));
     g = {{{1, 2}, {1, 1}}, {}};
     EXPECT_EQ(1, sum_of_paths_minimum_spanning_tree_prim(g));
-    g = {{{1, 1},{1, 2}}, {}};
+    g = {{{1, 1}, {1, 2}}, {}};
     EXPECT_EQ(1, sum_of_paths_minimum_spanning_tree_prim(g));
     g = {{{1, -1}, {1, 0}}, {}};
     EXPECT_EQ(-1, sum_of_paths_minimum_spanning_tree_prim(g));
