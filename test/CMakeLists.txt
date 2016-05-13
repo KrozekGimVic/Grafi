@@ -7,6 +7,7 @@ set(TEST_FILES
     mimimum_spanning_tree_test.cpp
     bellman_ford_test.cpp
     floyd_warshall_test.cpp
+    strongly_connected_components_test.cpp
 )
 add_executable(tests ${TEST_FILES})
 target_link_libraries(tests grafi gtest gtest_main)

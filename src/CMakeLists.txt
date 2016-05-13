@@ -5,5 +5,6 @@ set(SOURCE_FILES
     minimum_spanning_tree.cpp
     bellman_ford.cpp
     floyd_warshall.cpp
+    strongly_connected_components.cpp
 )
 add_library(grafi ${SOURCE_FILES})
