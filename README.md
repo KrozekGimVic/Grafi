@@ -1,6 +1,7 @@
 # Grafi
 
 Learning graph algorithms.
+[![Build Status](https://travis-ci.org/KrozekGimVic/Grafi.svg?branch=master)](https://travis-ci.org/KrozekGimVic/Grafi)
 
 ## Instalation and running tests
 Run
@@ -117,9 +118,6 @@ All done, feel free to commit.
 * max bipartite matching, min vertex cover
 * articulation points and bridges
 * ...
-
-## TODO
-Add Travis CI.
 
 Fun times!
 
