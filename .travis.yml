@@ -3,7 +3,7 @@ compiler:
   - g++
 os:
   - linux
-script: sh ./full_test.sh
+script: ./full_test.sh
 env:
   global:
     - LANG="en_US.UTF-8"

@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env bash
 
 BW='\x1b[37;1m'  # bold white
 BR='\x1b[31;1m'  # bold red
