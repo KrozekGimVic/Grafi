@@ -1,9 +1,14 @@
 language: cpp
 compiler:
-  - g++
+    - g++
 os:
-  - linux
+    - linux
+sudo: required
+before_install:
+    - sudo apt-get install gcc-4.8 -y
+    - sudo apt-get install doxygen
+
 script: ./full_test.sh
 env:
-  global:
-    - LANG="en_US.UTF-8"
+    global:
+        - LANG="en_US.UTF-8"
