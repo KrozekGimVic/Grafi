@@ -4,8 +4,8 @@
 #include <algorithm>
 
 void strong_connect(const weighted_graf_t& graph, std::vector<std::vector<int>>& components,
-                                        std::vector<int>& index, std::vector<int>& lowlink,
-                                                    std::vector<int>& stack, int ind, int v) {
+                    std::vector<int>& index, std::vector<int>& lowlink,
+                    std::vector<int>& stack, int ind, int v) {
     index[v] = ind;
     lowlink[v] = ind;
     ind++;
