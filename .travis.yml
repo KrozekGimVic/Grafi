@@ -5,7 +5,7 @@ os:
     - linux
 sudo: required
 before_install:
-    - sudo apt-get install gcc-4.8 -y
+    - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 50
     - sudo apt-get install doxygen
 
 script: ./full_test.sh
