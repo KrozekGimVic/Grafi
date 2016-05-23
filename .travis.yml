@@ -4,6 +4,13 @@ compiler:
 os:
     - linux
 sudo: required
+addons:
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - gcc-5
+            - g++-5
 before_install:
     - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 50
     - sudo apt-get install doxygen
