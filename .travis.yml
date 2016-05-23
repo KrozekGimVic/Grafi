@@ -12,11 +12,18 @@ addons:
         packages:
             - gcc-5
             - g++-5
+            - doxygen
+branches:
+    only:
+        - master
 before_install:
     - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 50
-    - sudo apt-get install doxygen
+    - doxygen --version
 
-script: ./full_test.sh
+script: ./full_test.sh -ts
+after_success:
+    ./full_test.sh -d
+
 env:
     global:
         - LANG="en_US.UTF-8"
